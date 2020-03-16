@@ -1,0 +1,8 @@
+{
+    "react-native":{
+        "packager":{
+            "port":8081
+        }
+    },
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

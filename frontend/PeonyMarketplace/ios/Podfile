@@ -1,0 +1,51 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PeonyMarketplace' do
+  pod 'Stripe', '~> 14.0.0'
+  inherit! :search_paths
+
+	pod 'React', :path => '../node_modules/react-native', :subspecs => [
+		'CxxBridge',
+		'Core',
+		'DevSupport',
+		'RCTAnimation',
+    		'RCTActionSheet',
+    		'RCTGeolocation',
+		'RCTImage',
+	        'RCTLinkingIOS',
+    		'RCTNetwork',
+    		'RCTSettings',
+    		'RCTText',
+    		'RCTVibration',
+		'RCTWebSocket'
+	]
+	pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+	pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+	pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+	pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+
+	pod 'FacebookSDK'
+	pod 'FBSDKCoreKit'
+	pod 'FBSDKLoginKit'
+	pod 'FBSDKShareKit'
+  
+  	pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+
+	pod 'GoogleSignIn', '~> 4.4.0'
+
+	pod 'Firebase'
+	pod 'Firebase/Core', '~> 6.3.0'
+	
+	pod 'BugsnagReactNative', :path => '../node_modules/bugsnag-react-native/BugsnagReactNative.podspec'
+	pod 'react-native-fetch-blob',
+    :path => '../node_modules/react-native-fetch-blob'
+
+    post_install do |installer|
+      installer.pods_project.targets.each do |target|
+        if target.name == "React"
+          target.remove_from_project
+        end
+      end
+    end
+end

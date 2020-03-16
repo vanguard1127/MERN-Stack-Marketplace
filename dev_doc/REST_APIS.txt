@@ -1,0 +1,183 @@
+			Back End REST APIS
+1.	AllUsers
+	-SignUp : Create User   request type :POST
+		url :	'users/signup'
+		request parameter:
+			•	email : string
+			•	password : string
+			•	phone_number  : string 
+			•	first_name : string
+			•	last_name : string 
+			•	photo  : blob
+			•	device_type  : integer
+			•	device_id  : string
+			•	country  : string 
+			•	county_state_province  : string
+			•	city :			string
+			•	zip_code : string
+			•	address_line1 : string
+			•	address_line2 : string
+			•	geo_lng : string
+			•	geo_lat : string
+			•	social_type : int
+			•	facebook_id : string
+			•	google_id : string
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	message : string (sucess == true)
+			•	user    : object (sucess == true)
+			•	token    : string (sucess == true)
+
+	-Sign In : Sign In.  Request type : POST
+		url :	'users/signin'
+		request parameter:
+			•	email : string
+			•	password : string
+			•	phone_number  : string 
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	user : string (success == true)
+			•	message : string (success == true)
+
+	-UpdateUser : Update User with any user info.  Request type : PUT
+		(x-access-token)
+		url :	'users/signup'
+		request parameter:
+			•	email : string
+			•	password : string
+			•	phone_number  : string 
+			•	first_name : string
+			•	last_name : string 
+			•	photo  : blob
+			•	device_type  : integer
+			•	device_id  : string
+			•	country  : string 
+			•	county_state_province  : string
+			•	city :			string
+			•	zip_code : string
+			•	address_line1 : string
+			•	address_line2 : string
+			•	geo_lng : string
+			•	geo_lat : string
+			•	social_type : int
+			•	facebook_id : string
+			•	google_id : string
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	user : string (success == true)
+			•	message : string (success == true)
+
+	-Social Login: Create or Update social login.  Request type : POST
+		url :	'users/social_login'
+		request parameter:
+			•	email : string
+			•	social_type : int
+			•	phone_number  : string 
+			•	first_name : string
+			•	last_name : string 
+			•	photo  : string
+			•	facebook_id : string
+			•	google_id : string
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	user : string (success == true)
+			•	message : string (success == true)
+
+	-ForgotPassword: Request forgot password with phone number.  Request type : POST
+		url :	'users/forgot_pass'
+		request parameter:
+			•	phone_number  : string 
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	user : string (success == true)
+			•	message : string (success == true)
+
+	-ResetPassword: Request reset password.  Request type : POST
+		url :	'users/reset_pass'
+		request parameter:
+			•	userId : string 
+			•	password: string 
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	user : string (success == true)
+			•	message : string (success == true)
+
+	-Verify Code : Request of verify code which is sent to own phone.  Request type : POST
+		url :	'users/verify_code'
+		request parameter:
+			•	userId : string 
+			•	verify_code :string 
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	user : string (success == true)
+			•	message : string (success == true)
+
+2.	Seller
+	-Create Product : Request creating new product.  Request type : POST
+		url :	'products/create'
+		request parameter:
+			o	userid				:long
+			o	name				:string
+			o	description			:string			
+			o	category_id			:long
+			o	price				:double
+			o	price_unit			:string 
+			o	photos				:Array{ order: Number , url:String}
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	product : string (success == true) //created product
+	-Get Product : Request getting new product by id.  Request type : GET
+		url :	'products/:id'
+		request parameter:
+			o	id				:long
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	product : string (success == true) 
+	-Update Product : Request updating a product with other params.  Request type : PUT
+		url :	'products/update'
+		request parameter:
+			o	id				:long
+			o	userid				:long
+			o	name				:string
+			o	description			:string			
+			o	category_id			:long
+			o	price				:double
+			o	price_unit			:string 
+			o	photos				:Array{ order: Number , url:String}
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	product : string (success == true) //updated product
+	-Delete Product : Request deleting a product by id.  Request type : DELETE
+		url :	'products/:id'
+		request parameter:
+			o	id				:long
+		response
+			•	success : string (true or false)
+			•	error : string (success == false)
+			•	result : (true or false)
+	-Get Products : Request getting products with some params.  Request type : GET
+		url :	'products/create'
+		request parameter:
+			o	userid				:long
+			o	sort_type			:string
+			o	keyword				:string		
+			o	category_id			:long
+			o	price_from			:double
+			o	price_to			:double
+			o	limit				:int
+			o	page				:int
+		response
+			•	success : string (true or false)
+			•	products : Product Array(success == true) //updated product
+
+3.	Buyer

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "522322123720",
+    "firebase_url": "https://marketplace-fcdc3.firebaseio.com",
+    "project_id": "marketplace-fcdc3",
+    "storage_bucket": "marketplace-fcdc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522322123720:android:95dab2884e67c675",
+        "android_client_info": {
+          "package_name": "com.peonymarketplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522322123720-ing7c44a2oa554tktc7d1ocuijgqr1mt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.peonymarketplace",
+            "certificate_hash": "e6b1da715c08a4989d2cd37ae9fa98f9ddefba82"
+          }
+        },
+        {
+          "client_id": "522322123720-cotf2p172qn9ctj316m8h4ua70m0pic9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBirKTh2qERCSaGCN1lBzRY6AtxOL0YwrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522322123720-cotf2p172qn9ctj316m8h4ua70m0pic9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

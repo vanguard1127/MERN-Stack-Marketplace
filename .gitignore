@@ -1,0 +1,8 @@
+backend/node_modules
+backend/.idea
+backend/.env
+
+frontend/PeonyMarketplace/src/config/config.js
+frontend/PeonyMarketplace/ios/Podfile.lock
+frontend/PeonyMarketplace/ios/Pods
+frontend/PeonyMarketplace/ios/build

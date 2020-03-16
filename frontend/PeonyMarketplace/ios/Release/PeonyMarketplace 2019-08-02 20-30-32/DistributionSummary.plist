@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PeonyMarketplace.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>2735AA12AFA7C49E09F2ECB2336BA4C3CF4BFD5B</string>
+				<key>dateExpires</key>
+				<string>2020/7/24</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>M623TYGCYW.org.com.PeonyMarketplace</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>M623TYGCYW</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>M623TYGCYW.org.com.PeonyMarketplace</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>PeonyMarketplace.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>2cc61897-cc62-48e1-8881-bb9aa3511571</string>
+				<key>name</key>
+				<string>PMF_2_device_ad_hoc</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>M623TYGCYW</string>
+				<key>name</key>
+				<string>Kedar Samant</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

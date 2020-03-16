@@ -1,0 +1,141 @@
+Peony DataBase Design
+
+
+
+•users
+
+o	id               		  :long
+o	social_type			  :int			0: normal id 1: facebook 2: google 
+o	facebook			  :string
+o	google				  :string
+o	email				  :string
+o	password			  :string
+o	phone_number			  :string
+o	user_type			  :integer
+o	first_name			  :string
+o	last_name			  :string
+o	photo_id			  :string
+o	country				  :string
+o	county_state_province		  :string
+o	city				  :string
+o	address_line1			  :string
+o	address_line2			  :string
+o	geo_lat				  :float			//gps location latitude
+o	geo_lng				  :float			//gps location longitude
+o	device_id			  :string			//firebase  registration ID
+o	device_type			  :integer		//0: iphone 1:android device
+o	updated_date			  :date
+o	created_date			  :date
+
+
+
+
+•categories
+o	id 				:long
+o	category_name			:string
+o	user_id				:ObjectId
+o	updated_date			:date
+o	created_date			:date
+
+
+•products
+o	id				:long
+o	userid				:long
+o	name				:string
+o	description			:string
+o	photos				:Array{ order: Number , url:String}
+o	category_id			:long
+o	price				:double
+o	price_unit			:string
+o	created_date			:date
+o	updated_date			:date
+
+•user_images
+o	id				:long
+o	url				:string
+o	user_id				:long
+o	created_date			:date
+o	updated_date			:date
+
+
+•orders
+o	id				:long
+o	seller_id			:long (a id of users document)
+o	buyer_id			:long (a id of users document)
+o	status				:int   0:none 1: confirmed  2:shipped 3:delivered
+o	confirmed_date			:date
+o	shipped_date			:date
+o	delivered_date			:date
+o	created_date			:date
+o	updated_date			:date
+
+•carts
+o	id				:long
+o	order_id			:long(a id of orders document)
+o	product_id			:long 
+o	count				:int
+o	type				:int( 0: stripe, 1:paypal)
+o	createdAt			:date
+o	updatedAt			:date
+
+•transactions
+o	id				:long
+o	type				:payment type( default:'stripe' , 0: stripe ,1:paypal)
+o	payment_id			:string
+o	amount				:int
+o	currency			:string
+o	pCreatedAt			:date
+o	createdAt			:date
+o	updatedAt			:date
+
+•checkouts
+o	id				:long
+o	order_id			:long(a id of orders document)
+o	user_id				:long(a id of users document)
+o	type				:int( 0:points , 1:card)
+o	points_type			:int(0:send, 1:charge) useful for only type = 0
+o	transaction_id			:long(a id of tansactions document)
+o	shippingaddress_id		:id
+o	shipping_type			:Number( 0 : buyer_address , 1:billing new address)
+o	amount				:long 
+o	currency			:string('default 'usd'')
+o	points				:int
+o	createdAt			:date
+o	updatedAt			:date
+
+
+•address
+o	address				:string
+{
+o	city				:string
+o	country				:string
+o	line1				:string
+o	line2				:string
+o	postal_code			:string
+o	zip_code			:string
+o	email				:string
+o	name				:string
+o	phone				:string
+}
+
+•user_points
+o	user_id				:long(id of user docuent)
+o	points				:integer
+o	createdAt			:date
+o	updatedAt			:date
+
+•fee
+o	type				:integer( 0 : product_id, 1:category_id)
+o	type_id				:long(product id or category id)
+o	percent				:integer
+o	createdAt			:date
+o	updatedAt			:date
+
+•shipping
+o	id				:integer( 0 : product_id, 1:category_id)
+o	src_address_id			:long(address id)
+o	dst_address_id			:long(address id)
+o	order_ids 			:Array(order_id)
+o	createdAt			:date
+o	updatedAt			:date
+
