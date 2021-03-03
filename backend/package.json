@@ -28,7 +28,7 @@
     "nodemailer": "^6.0.0",
     "nodemon": "^1.19.1",
     "parse-error": "^0.2.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "stripe": "^7.1.0",
     "twilio": "^3.31.0",
     "validator": "^10.11.0"
