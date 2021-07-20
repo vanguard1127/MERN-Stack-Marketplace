@@ -15,7 +15,7 @@
     "native-base": "^2.12.1",
     "react": "16.8.3",
     "react-cross-form": "^1.2.12",
-    "react-native": "0.59.9",
+    "react-native": "0.62.3",
     "react-native-actionsheet": "^2.4.2",
     "react-native-async-image-animated": "^4.3.0",
     "react-native-drawer": "^2.5.1",
